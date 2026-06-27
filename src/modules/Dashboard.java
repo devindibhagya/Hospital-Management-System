@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Dashboard extends JFrame {
-    // මැද තියෙන content පැනල් එක මාරු කිරීම සඳහා එය global variable එකක් ලෙස ප්‍රකාශ කරයි
+    
     private JPanel mainContent; 
     private String userRole;
 
@@ -42,7 +42,7 @@ public class Dashboard extends JFrame {
         JPanel sideMenu = new JPanel();
         sideMenu.setBackground(new Color(44, 62, 80)); // Dark Charcoal Blue
         sideMenu.setPreferredSize(new Dimension(200, 600));
-        // බොත්තම් 6ක් ලස්සනට පෙනෙන්න Grid layout එක 7, 1 ලෙස සකස් කළා
+        
         sideMenu.setLayout(new GridLayout(7, 1, 5, 5)); 
 
         // Navigation Buttons
@@ -69,7 +69,7 @@ public class Dashboard extends JFrame {
         mainContent = new JPanel();
         mainContent.setLayout(new BorderLayout());
         
-        // සිස්ටම් එකට ලොග් වුණු ගමන් මැද තිරයට කෙලින්ම HomeSummary (Cards) පැනල් එක ලෝඩ් කරයි
+        
         mainContent.add(new HomeSummary(), BorderLayout.CENTER);
 
         add(mainContent, BorderLayout.CENTER);
