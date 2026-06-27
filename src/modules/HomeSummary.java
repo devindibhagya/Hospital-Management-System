@@ -30,7 +30,6 @@ public class HomeSummary extends JPanel {
         
         add(welcomePanel, BorderLayout.NORTH);
 
-        // --- මැද තියෙන Cards පැනල් එක (Grid Layout) ---
         JPanel cardsContainer = new JPanel(new GridLayout(1, 3, 20, 20));
         cardsContainer.setBackground(new Color(245, 247, 250));
 
@@ -55,7 +54,7 @@ public class HomeSummary extends JPanel {
         refreshCounts();
     }
 
-    // ලස්සන Flat Card එකක් ඩිසයින් කරන්න උදව් වෙන Helper Method එකක්
+    
     private JPanel createSummaryCard(String title, String count, Color bgColor) {
         JPanel card = new JPanel();
         card.setLayout(new BoxLayout(card, BoxLayout.Y_AXIS));
@@ -76,13 +75,13 @@ public class HomeSummary extends JPanel {
         card.add(Box.createRigidArea(new Dimension(0, 15))); // ඉඩ තැබීමට
         card.add(lblCount);
 
-        // පස්සේ කාලෙක ලේබල් එක වෙනස් කරන්න පුළුවන් වෙන්න reference එකක් තියාගන්නවා
+        
         card.putClientProperty("countLabel", lblCount);
 
         return card;
     }
 
-    // SQL COUNT පාවිච්චි කරලා දත්ත ලබාගැනීම
+   
     public void refreshCounts() {
         try {
             Connection conn = DBConnection.getConnection();
