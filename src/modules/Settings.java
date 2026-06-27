@@ -19,16 +19,16 @@ public class Settings extends JPanel {
     public Settings(String userRole) {
         this.currentUserRole = userRole;
         
-        setLayout(new GridLayout(1, 2, 25, 25)); // කාඩ් දෙක දෙපැත්තට ලස්සනට බෙදීමට
+        setLayout(new GridLayout(1, 2, 25, 25));
         setBorder(new EmptyBorder(25, 25, 25, 25));
         setBackground(new Color(245, 247, 250)); // Main Background
 
         Font labelFont = new Font("Segoe UI", Font.BOLD, 13);
         Color labelColor = new Color(127, 140, 141);
 
-        // -------------------------------------------------------------
+        
         // --- 1. LEFT PANEL: Change Password Card ---
-        // -------------------------------------------------------------
+        
         JPanel passCard = new JPanel(new GridBagLayout());
         passCard.setBackground(Color.WHITE);
         passCard.setBorder(BorderFactory.createCompoundBorder(
@@ -78,9 +78,9 @@ public class Settings extends JPanel {
 
         add(passCard);
 
-        // -------------------------------------------------------------
+   
         // --- 2. RIGHT PANEL: Create New Account Card ---
-        // -------------------------------------------------------------
+        
         JPanel userCard = new JPanel(new GridBagLayout());
         userCard.setBackground(Color.WHITE);
         userCard.setBorder(BorderFactory.createCompoundBorder(
@@ -137,7 +137,7 @@ public class Settings extends JPanel {
         btnCreateUser.setBorder(BorderFactory.createEmptyBorder(12, 12, 12, 12));
         userCard.add(btnCreateUser, gbc);
 
-        // Admin කෙනෙක් නෙවෙයි නම් ආරක්ෂාව සඳහා මේ කාඩ් එක Lock කරනවා
+        // -----If admin lock the card for security ------
         if (!userRole.equalsIgnoreCase("Admin")) {
             txtNewUser.setEnabled(false);
             txtNewUserPass.setEnabled(false);
