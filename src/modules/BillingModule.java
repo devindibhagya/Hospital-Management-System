@@ -22,9 +22,7 @@ public class BillingModule extends JPanel {
         setBorder(new EmptyBorder(25, 25, 25, 25));
         setBackground(new Color(245, 247, 250)); // Main Background Color
 
-        // -------------------------------------------------------------
-        // --- 1. LEFT PANEL: Modern Input Form Card ---
-        // -------------------------------------------------------------
+    
         JPanel formCard = new JPanel();
         formCard.setBackground(Color.WHITE);
         formCard.setLayout(new GridBagLayout());
@@ -113,9 +111,8 @@ public class BillingModule extends JPanel {
 
         add(formCard, BorderLayout.WEST);
 
-        // -------------------------------------------------------------
-        // --- 2. RIGHT PANEL: Modern Data Table Card ---
-        // -------------------------------------------------------------
+  #
+       
         JPanel tableCard = new JPanel(new BorderLayout());
         tableCard.setBackground(Color.WHITE);
         tableCard.setBorder(BorderFactory.createCompoundBorder(
