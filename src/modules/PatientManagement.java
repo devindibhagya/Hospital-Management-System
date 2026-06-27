@@ -12,11 +12,11 @@ import java.awt.*;
 import java.sql.*;
 
 public class PatientManagement extends JPanel {
-    private JTextField txtName, txtAge, txtContact, txtSearch; // txtSearch එකතු කළා
+    private JTextField txtName, txtAge, txtContact, txtSearch; 
     private JComboBox<String> cmbGender;
     private JTable table;
     private DefaultTableModel tableModel;
-    private TableRowSorter<DefaultTableModel> rowSorter; // Sorter එකක් ප්‍රකාශ කිරිම
+    private TableRowSorter<DefaultTableModel> rowSorter;
 
     public PatientManagement() {
         setLayout(new BorderLayout(25, 25));
@@ -159,9 +159,9 @@ public class PatientManagement extends JPanel {
             private void searchTable() {
                 String text = txtSearch.getText();
                 if (text.trim().length() == 0) {
-                    rowSorter.setRowFilter(null); // කිසිවක් ටයිප් කර නැත්නම් ඔක්කොම පෙන්වන්න
+                    rowSorter.setRowFilter(null); 
                 } else {
-                    // අකුරු කැපිටල්/සිම්පල් බේදයකින් තොරව (case-insensitive) නම හෝ ID එක අනුව සෙවීම
+                    
                     rowSorter.setRowFilter(RowFilter.regexFilter("(?i)" + text));
                 }
             }
