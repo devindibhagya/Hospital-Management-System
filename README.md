@@ -36,6 +36,6 @@ The main objective of this project is to develop a computerized hospital managem
 
 **Bhagya Devindi**
 
-Information Technology Student | Software Developer
+Information Technology Student 
 
 🔗 [GitHub](https://github.com/devindibhagya)
